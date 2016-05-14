@@ -1,3 +1,4 @@
+require 'zenvia/configuration'
 require 'zenvia/sms/version'
 
 module Zenvia
