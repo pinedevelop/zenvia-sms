@@ -8,6 +8,10 @@ module Zenvia
         @detail_code = detail_code
         @message = message
       end
+
+      def to_s
+        @message
+      end
     end
   end
 end
