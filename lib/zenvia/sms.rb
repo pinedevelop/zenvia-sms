@@ -26,6 +26,10 @@ module Zenvia
       send(schedule_for: time)
     end
 
+    def cancel
+      SMS.cancel(@id)
+    end
+
     private
 
     def send(schedule_for: nil)
@@ -47,6 +51,11 @@ module Zenvia
     end
 
     class << self
+
+      def cancel(id)
+        SMS.to_zenvia("cancel-sms/#{id}", nil)
+      end
+
       def to_zenvia(endpoint, json_data)
         json_response = RestClient.post "#{BASE_URL}/#{endpoint}", json_data, default_headers
         response = JSON.parse(json_response).values.first
