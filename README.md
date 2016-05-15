@@ -1,4 +1,5 @@
 # Zenvia::SMS
+[![Gem Version](https://badge.fury.io/rb/zenvia-sms.svg)](https://badge.fury.io/rb/zenvia-sms)
 [![Build Status](https://travis-ci.org/pinedevelop/zenvia-sms.svg?branch=master)](https://travis-ci.org/pinedevelop/zenvia-sms)
 [![Code Climate](https://codeclimate.com/github/pinedevelop/zenvia-sms/badges/gpa.svg)](https://codeclimate.com/github/pinedevelop/zenvia-sms)
 
