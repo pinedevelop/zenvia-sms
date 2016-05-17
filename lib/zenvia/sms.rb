@@ -53,17 +53,17 @@ module Zenvia
     class << self
 
       def cancel(id)
-        SMS.to_zenvia("cancel-sms/#{id}", nil)
+        SMS.to_zenvia("cancel-sms/#{id}", nil, :blocked)
       end
 
-      def to_zenvia(endpoint, json_data)
+      def to_zenvia(endpoint, json_data, expected_status = :ok)
         json_response = RestClient.post "#{BASE_URL}/#{endpoint}", json_data, default_headers
         response = JSON.parse(json_response).values.first
 
         status_code = StatusCode[response['statusCode']]
         detail_code = DetailCode[response['detailCode']]
 
-        raise Error.new(status_code, detail_code, response['detailDescription']) unless status_code == :ok
+        raise Error.new(status_code, detail_code, response['detailDescription']) unless status_code == expected_status
 
         response
       end

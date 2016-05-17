@@ -8,8 +8,8 @@ module Zenvia
     '05' => :blocked_no_coverage,
     '06' => :blocked_black_listed,
     '07' => :blocked_invalid_number,
-    '08' => :blocked_content_not_allowed,
-    '09' => :blocked_message_expired,
+    '08' => :blocked_content_not_allowed_message_expired,
+    '09' => :blocked,
     '10' => :error
   }.freeze
 end
