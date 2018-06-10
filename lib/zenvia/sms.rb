@@ -7,7 +7,7 @@ require 'zenvia/sms/version'
 
 module Zenvia
   class SMS
-    BASE_URL = 'https://api-rest.zenvia360.com.br/services'.freeze
+    BASE_URL = 'https://api-rest.zenvia.com/services'.freeze
 
     def initialize(from: nil, to:, message:, callback: nil, id: nil, aggregate_id: nil)
       @from = from
